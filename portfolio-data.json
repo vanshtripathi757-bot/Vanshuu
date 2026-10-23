@@ -1,0 +1,23 @@
+{
+  "headline": "Curious mind. Builder's mindset.",
+  "intro": "Hey, I'm Vanshu — an aspiring software engineer exploring how thoughtful design and clean code can turn ideas into useful digital experiences.",
+  "status": "Currently learning programming fundamentals, Git and web development.",
+  "aboutTitle": "Learning by making.",
+  "aboutText": "I'm at the beginning of my software engineering journey. I value curiosity, consistency and understanding how things work—not just copying a solution.",
+  "contactTitle": "Have an idea or advice?",
+  "contactText": "I'm always interested in learning from other builders and discovering projects that make me think.",
+  "projects": [
+    {
+      "title": "Personal Portfolio",
+      "description": "A responsive home for my projects, learning journey and developer identity."
+    },
+    {
+      "title": "Student Record CLI",
+      "description": "A beginner-friendly command-line program to practise logic, functions and structured data."
+    },
+    {
+      "title": "Git Practice Lab",
+      "description": "Small experiments with commits, branches and documenting changes in GitHub."
+    }
+  ]
+}
