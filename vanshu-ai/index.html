@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090b12">
+<title>Vanshu AI — Personal Assistant</title>
+<style>
+:root{color-scheme:dark;--bg:#090b12;--panel:#111522;--line:#252b3b;--muted:#9aa4ba;--text:#f4f6ff;--blue:#6c7cff;--cyan:#5be1e6}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% -20%,#202a56 0,transparent 55%),var(--bg);color:var(--text);font:15px/1.5 system-ui,-apple-system,Segoe UI,sans-serif;min-height:100vh}
+.app{display:grid;grid-template-columns:260px 1fr;min-height:100vh;max-width:1500px;margin:auto}.side{border-right:1px solid var(--line);padding:22px 16px;display:flex;flex-direction:column;gap:24px;background:#0a0c13cc}.brand{display:flex;align-items:center;gap:11px;font-size:18px;font-weight:750;letter-spacing:-.4px}.logo{width:38px;height:38px;border-radius:13px;background:linear-gradient(135deg,var(--blue),var(--cyan));display:grid;place-items:center;color:#080b15;font-weight:900;font-size:19px;box-shadow:0 6px 25px #6c7cff35}.new{border:1px solid #3d4663;background:#151a2b;color:white;border-radius:12px;padding:12px;text-align:left;font-weight:650;cursor:pointer}.new:hover,.chip:hover{border-color:var(--blue)}.label{font-size:11px;color:#78839c;text-transform:uppercase;letter-spacing:1.4px;margin:0 8px}.nav{display:grid;gap:7px}.nav div{padding:10px 12px;border-radius:10px;color:#c3cbe0}.nav .active{background:#1a2034;color:white}.sidefoot{margin-top:auto;color:#778199;font-size:12px}.main{display:flex;flex-direction:column;min-width:0;min-height:100vh}.top{height:68px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 28px}.status{font-size:12px;color:#9aa4ba;display:flex;align-items:center;gap:7px}.dot{width:7px;height:7px;background:#f0b84d;border-radius:50%}.content{width:min(850px,100%);margin:0 auto;padding:42px 24px 20px;flex:1;display:flex;flex-direction:column}.hero{text-align:center;margin:30px 0 28px}.orb{margin:0 auto 20px;width:76px;height:76px;border-radius:26px;background:linear-gradient(145deg,#252c58,#12192c);border:1px solid #414d85;display:grid;place-items:center;box-shadow:0 0 55px #5365ff20}.orb span{font-size:32px;background:linear-gradient(135deg,#a8b4ff,var(--cyan));color:transparent;background-clip:text}.hero h1{font-size:clamp(30px,5vw,45px);line-height:1.1;letter-spacing:-1.7px;margin:0 0 12px}.grad{background:linear-gradient(90deg,#a3aaff,#5be1e6);background-clip:text;color:transparent}.hero p{color:var(--muted);margin:0}.chips{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:4px 0 24px}.chip{background:#111522;border:1px solid var(--line);border-radius:14px;padding:15px;text-align:left;color:white;cursor:pointer}.chip strong{display:block;margin-bottom:4px;font-size:14px}.chip small{color:var(--muted);font-size:12px}.chat{display:flex;flex-direction:column;gap:16px;padding:10px 0 22px}.msg{max-width:88%;padding:13px 16px;border-radius:16px;white-space:pre-wrap;overflow-wrap:anywhere}.msg.user{align-self:flex-end;background:#27315a;border:1px solid #3a477b}.msg.bot{align-self:flex-start;background:#111522;border:1px solid var(--line)}.msg .who{font-size:11px;color:#9ca8c6;margin-bottom:5px;font-weight:700}.composer{position:sticky;bottom:0;padding:14px 24px 10px;background:linear-gradient(transparent,var(--bg) 20%)}.composebox{max-width:802px;margin:auto;border:1px solid #343b52;background:#111522;border-radius:18px;padding:10px;box-shadow:0 15px 50px #0005}.composebox textarea{display:block;width:100%;resize:vertical;min-height:65px;max-height:180px;background:transparent;border:0;outline:0;color:white;font:inherit;padding:8px}.composebottom{display:flex;align-items:center;justify-content:space-between;padding:5px 4px 2px}.hint{color:#78839c;font-size:11px}.send{border:0;border-radius:11px;padding:10px 17px;background:linear-gradient(135deg,var(--blue),#5868e9);color:white;font-weight:700;cursor:pointer}.send:disabled{opacity:.4}.disclaimer{text-align:center;color:#6f7990;font-size:11px;padding:8px 10px 0}.mobilebrand{display:none}
+@media(max-width:700px){.app{display:block}.side{display:none}.top{height:60px;padding:0 17px}.mobilebrand{display:flex;align-items:center;gap:8px;font-weight:750}.mobilebrand .logo{width:31px;height:31px;border-radius:10px;font-size:15px}.content{padding:24px 16px 8px}.hero{margin:28px 0 23px}.hero h1{font-size:34px}.orb{width:65px;height:65px;border-radius:22px}.chips{gap:8px}.chip{padding:12px}.composer{padding:10px 12px 8px}.msg{max-width:95%}.hint{max-width:180px}}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="side">
+<div class="brand"><div class="logo">V</div><span>Vanshu AI</span></div>
+<button class="new" id="newChat">＋ &nbsp; New conversation</button>
+<div><p class="label">Workspace</p><div class="nav"><div class="active">✦ &nbsp; Assistant</div><div>⌘ &nbsp; Code helper</div><div>▤ &nbsp; Writing studio</div><div>◷ &nbsp; Task planner</div></div></div>
+<div class="sidefoot">PERSONAL AI WORKSPACE<br><br>Prototype v1.0</div>
+</aside>
+<main class="main">
+<header class="top"><div class="mobilebrand"><div class="logo">V</div>Vanshu AI</div><div class="status"><span class="dot"></span><span>Prototype mode · no AI connected</span></div></header>
+<section class="content">
+<div class="hero" id="hero"><div class="orb"><span>✦</span></div><h1>What can we build<br><span class="grad">today?</span></h1><p>Your personal workspace for ideas, code and plans.</p></div>
+<div class="chips" id="chips">
+<button class="chip" data-prompt="Help me plan and build a modern website, step by step."><strong>⌘ Build a website</strong><small>Plan pages, design and code</small></button>
+<button class="chip" data-prompt="Help me understand and write a C program. Explain it simply."><strong>⌁ Code assistant</strong><small>Learn, debug and improve code</small></button>
+<button class="chip" data-prompt="Help me turn my goal into a practical step-by-step plan."><strong>◷ Plan a project</strong><small>Break a goal into clear tasks</small></button>
+<button class="chip" data-prompt="Help me write a clear, polished piece of content."><strong>✎ Write something</strong><small>Draft, refine and brainstorm</small></button>
+</div>
+<div class="chat" id="chat" aria-live="polite"></div>
+</section>
+<div class="composer"><form class="composebox" id="form"><textarea id="prompt" placeholder="Message Vanshu AI…" aria-label="Message Vanshu AI" required></textarea><div class="composebottom"><span class="hint">Enter to send · Shift + Enter for a new line</span><button class="send" id="send" type="submit">Send ↗</button></div></form><div class="disclaimer">This is an interface prototype. Replies are local demo responses, not generated by a live AI model.</div></div>
+</main>
+</div>
+<script>
+const chat=document.getElementById('chat'),promptBox=document.getElementById('prompt'),form=document.getElementById('form'),hero=document.getElementById('hero'),chips=document.getElementById('chips');
+function addMessage(text,role){const el=document.createElement('div');el.className='msg '+role;const who=document.createElement('div');who.className='who';who.textContent=role==='user'?'YOU':'VANSHU AI · DEMO';const body=document.createElement('div');body.textContent=text;el.append(who,body);chat.append(el);el.scrollIntoView({behavior:'smooth',block:'nearest'});}
+function demoReply(text){const q=text.toLowerCase();if(/\b(c program|debug|code|html|css|javascript|python|error)\b/.test(q))return 'I can help you work through this code task.\n\n1. Share the code or exact error.\n2. Tell me what you expected it to do.\n3. We can inspect the problem and build a fix step by step.\n\nDemo limitation: a live AI model is not connected yet, so this reply is a template.';if(/website|portfolio|design|build/.test(q))return 'Let’s break the build into manageable steps:\n\n1. Define the goal and target users.\n2. Sketch the key screens.\n3. Build a responsive first version.\n4. Test it on mobile.\n5. Publish and improve it.\n\nTell me the kind of website you want. This is a demo response, not live AI.';if(/plan|goal|project|task/.test(q))return 'A useful project plan starts with a clear outcome, then small tasks, priorities and a way to check progress.\n\nTry this structure:\n• Goal\n• First small step\n• Tools needed\n• Three next actions\n• How to measure completion\n\nThis is a local demo response; a real AI model is not connected yet.';return 'I’ve received your message. To make this a real assistant, the next step is connecting a language model through a secure backend. This prototype currently uses preset demo replies and cannot independently browse the web, remember conversations, or execute external tasks.';}
+form.addEventListener('submit',e=>{e.preventDefault();const text=promptBox.value.trim();if(!text)return;hero.style.display='none';chips.style.display='none';addMessage(text,'user');promptBox.value='';addMessage(demoReply(text),'bot');});
+document.querySelectorAll('[data-prompt]').forEach(b=>b.addEventListener('click',()=>{promptBox.value=b.dataset.prompt;promptBox.focus();}));
+document.getElementById('newChat').addEventListener('click',()=>{chat.replaceChildren();hero.style.display='';chips.style.display='grid';promptBox.value='';promptBox.focus();});
+promptBox.addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();form.requestSubmit();}});
+</script>
+</body>
+</html>
